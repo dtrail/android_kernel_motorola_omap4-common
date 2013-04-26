@@ -611,7 +611,7 @@ static struct freq_attr omap_uV_mV_table = {
  * Variable GPU OC - sysfs interface for cycling through different GPU top speeds
  * Author: imoseyon@gmail.com
  *
-*/
+
 
 static ssize_t show_gpu_oc(struct cpufreq_policy *policy, char *buf)
 {
@@ -649,12 +649,13 @@ static struct freq_attr gpu_oc = {
 	.attr = {.name = "gpu_oc", .mode=0666,},
 	.show = show_gpu_oc,
 	.store = store_gpu_oc,
-};
+}; */
+
 static struct freq_attr *omap_cpufreq_attr[] = {
 	&cpufreq_freq_attr_scaling_available_freqs,
 	&omap_cpufreq_attr_screen_off_freq,
 	&omap_uV_mV_table,
-	&gpu_oc,
+	/* &gpu_oc, */
 	NULL,
 };
 
